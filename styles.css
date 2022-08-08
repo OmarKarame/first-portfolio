@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 1% 0%;
+  background-color: #0d0e10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header h1 {
+  color: #F9F9FC;
+}
+header .header-links a {
+  color: #F9F9FC;
+}
+header .header-links .individual-header-links {
+  text-decoration: none;
+  margin: 0rem 0.6rem;
+}
+
+#my-intro {
+  background-color: #F9F9FC;
+}
