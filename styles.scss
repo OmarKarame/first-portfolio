@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Mouse+Memoirs&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&family=Source+Sans+Pro&display=swap');
+
+$font-primary: "Bodoni Moda", serif;
+$font-secondary: "Cormorant", serif;
+$font-tertiary: "Source Sans Pro", sans-serif;
+
 $color-primary: #645e96;
+$color-primary-hints: #3f1786;
 $color-white: #F9F9FC;
 $color-black: #0d0e10;
-$color-seconday: #F09081;
+$color-secondary: #F09081;
 $color-tertiary: #d17589;
+$color-yellow-hints: #f8d583;
 
-// Fonts Moret, Cirka, Suisse Int'l
 
 *{
     margin: 0;
@@ -13,14 +22,19 @@ $color-tertiary: #d17589;
 
 header{
     padding: 1% 0%;
-    background-color: $color-black;
+    background-color: $color-primary;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: $font-primary;
+    margin-bottom: 0.3px;
     h1{
         color: $color-white;
+        font-weight: 10;
     }
     .header-links{
+        display: flex;
+        align-items: center;
         a{
             color: $color-white;
         }
@@ -28,14 +42,97 @@ header{
             text-decoration: none;
             margin: 0rem 0.6rem;
         }
+        button{
+            font-family: $font-tertiary;
+            color: $color-primary-hints;
+            font-weight: 700;
+            border: 2px solid $color-primary-hints;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: $color-yellow-hints;
+        }
+    }
+}
+
+
+#my-intro{
+    background-color: $color-white;
+    // border: 5px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    aspect-ratio: 2.5;
+    padding-top: 4%;
+    .my-intro-info{
+        //  border: 5px solid green;
+         width: 40%;
+         font-family: $font-secondary;
+         margin: auto;
+         h3{
+            font-size: 150%;
+            color: $color-yellow-hints;
+         }
+         h2{
+            color: $color-white;
+            font-size: 300%;
+            font-weight: 900;
+            #job{
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color: $color-primary-hints;
+                text-decoration-thickness: 35px;
+            }
+         }
+         button{
+            font-family: $font-tertiary;
+            color: $color-primary-hints;
+            font-weight: 700;
+            border: 2px solid $color-primary-hints;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: $color-yellow-hints;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+    }
+    .my-intro-image{
+        // border: 5px solid white;
+        height: 100%;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .bubble{
+            background-color: $color-primary-hints;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 50% 50% 0% 48%;
+            margin-left: 2%;
+            margin-top: 5%;
+            box-shadow: 0px 0px 3px 8px $color-primary-hints;
+            img{
+                // margin-top: -10%;
+                margin-left: -10%;
+            }
+            position: relative;
+            .small-bubble{
+                background-color: $color-yellow-hints;
+                height: 20%;
+                aspect-ratio: 1;
+                margin-top: 3%;
+                margin-left: -5%;
+                border-radius: 50%;
+                box-shadow: 0px 0px 3px 20px $color-yellow-hints;
+            }
+        }
     }
 }
 
 
 
-
-#my-intro{
-    background-color: $color-white;
-}
 
 

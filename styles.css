@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Mouse+Memoirs&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&family=Source+Sans+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +8,20 @@
 
 header {
   padding: 1% 0%;
-  background-color: #0d0e10;
+  background-color: #645e96;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-family: "Bodoni Moda", serif;
+  margin-bottom: 0.3px;
 }
 header h1 {
   color: #F9F9FC;
+  font-weight: 10;
+}
+header .header-links {
+  display: flex;
+  align-items: center;
 }
 header .header-links a {
   color: #F9F9FC;
@@ -20,7 +30,85 @@ header .header-links .individual-header-links {
   text-decoration: none;
   margin: 0rem 0.6rem;
 }
+header .header-links button {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #3f1786;
+  font-weight: 700;
+  border: 2px solid #3f1786;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #f8d583;
+}
 
 #my-intro {
   background-color: #F9F9FC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #645e96;
+  aspect-ratio: 2.5;
+  padding-top: 4%;
+}
+#my-intro .my-intro-info {
+  width: 40%;
+  font-family: "Cormorant", serif;
+  margin: auto;
+}
+#my-intro .my-intro-info h3 {
+  font-size: 150%;
+  color: #f8d583;
+}
+#my-intro .my-intro-info h2 {
+  color: #F9F9FC;
+  font-size: 300%;
+  font-weight: 900;
+}
+#my-intro .my-intro-info h2 #job {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #3f1786;
+  text-decoration-thickness: 35px;
+}
+#my-intro .my-intro-info button {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #3f1786;
+  font-weight: 700;
+  border: 2px solid #3f1786;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #f8d583;
+  margin-top: 10px;
+  font-size: 15px;
+}
+#my-intro .my-intro-image {
+  height: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#my-intro .my-intro-image .bubble {
+  background-color: #3f1786;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50% 50% 0% 48%;
+  margin-left: 2%;
+  margin-top: 5%;
+  box-shadow: 0px 0px 3px 8px #3f1786;
+  position: relative;
+}
+#my-intro .my-intro-image .bubble img {
+  margin-left: -10%;
+}
+#my-intro .my-intro-image .bubble .small-bubble {
+  background-color: #f8d583;
+  height: 20%;
+  aspect-ratio: 1;
+  margin-top: 3%;
+  margin-left: -5%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 20px #f8d583;
 }
