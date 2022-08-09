@@ -112,3 +112,50 @@ header .header-links button {
   border-radius: 50%;
   box-shadow: 0px 0px 3px 20px #f8d583;
 }
+
+#tech-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+#tech-skills h4 {
+  margin: 3rem 0rem;
+  font-size: 1.5rem;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #F09081;
+  text-decoration-thickness: 10px;
+  font-family: "Bodoni Moda", serif;
+}
+#tech-skills p {
+  font-size: 0.8rem;
+  margin: 0rem 21rem;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  color: grey;
+  margin-bottom: 2rem;
+}
+
+.technologies {
+  display: flex;
+  justify-content: space-around;
+  padding: 0rem 5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  height: 6rem;
+}
+
+.technology-card {
+  height: 3rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.technology-card img {
+  height: 3rem;
+  aspect-ratio: 1;
+  margin: 1rem;
+}
