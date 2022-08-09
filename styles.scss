@@ -44,7 +44,7 @@ header{
         }
         button{
             font-family: $font-tertiary;
-            color: $color-primary-hints;
+            color: $color-black;
             font-weight: 700;
             border: 2px solid $color-primary-hints;
             padding: 5px 10px;
@@ -86,7 +86,7 @@ header{
          }
          button{
             font-family: $font-tertiary;
-            color: $color-primary-hints;
+            color: $color-black;
             font-weight: 700;
             border: 2px solid $color-primary-hints;
             padding: 10px 15px;
@@ -137,48 +137,74 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
-    h4{
-        margin: 3rem 0rem;
-        font-size: 1.5rem;
-        text-decoration-line: underline;
-        text-decoration-style: wavy;
-        text-decoration-color: $color-secondary;
-        text-decoration-thickness: 10px;
-        font-family: $font-primary;
-    }
+    margin-bottom: 4rem;
+    height: 26rem;
     p{
-        font-size: 0.8rem;
-        margin: 0rem 21rem;
+        font-size: 1rem;
+        margin: 0rem 20rem;
         text-align: center;
         font-family: $font-tertiary;
         color: grey;
         margin-bottom: 2rem;
     }
+}
 
+h4{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: $color-secondary;
+    text-decoration-thickness: 10px;
+    font-family: $font-primary;
 }
 
 .technologies{
     display: flex;
     justify-content: space-around;
-    padding: 0rem 5rem;
+    padding: 0rem 6rem;
     font-family: $font-tertiary;
     font-size: 1rem;
     height: 6rem;
 }
 
 .technology-card{
-    height: 3rem;
+    height: 5rem;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1.5rem 0rem;
     img{
-        height: 3rem;
+        height: 4rem;
         aspect-ratio: 1;
         margin: 1rem;
     }
 }
 
+#projects{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-secondary;
+    h4{
+        color: $color-black;
+        text-decoration-color: $color-yellow-hints;
+    }
+}
 
-
+.project-card-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    margin-bottom: 3rem;
+    .project-card{
+        border: 3px solid $color-white;
+        background-color: $color-primary;
+        height: 32rem;
+        width: 28rem;
+        margin: 1rem;
+    }
+}

@@ -32,7 +32,7 @@ header .header-links .individual-header-links {
 }
 header .header-links button {
   font-family: "Source Sans Pro", sans-serif;
-  color: #3f1786;
+  color: #0d0e10;
   font-weight: 700;
   border: 2px solid #3f1786;
   padding: 5px 10px;
@@ -71,7 +71,7 @@ header .header-links button {
 }
 #my-intro .my-intro-info button {
   font-family: "Source Sans Pro", sans-serif;
-  color: #3f1786;
+  color: #0d0e10;
   font-weight: 700;
   border: 2px solid #3f1786;
   padding: 10px 15px;
@@ -118,44 +118,74 @@ header .header-links button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
-}
-#tech-skills h4 {
-  margin: 3rem 0rem;
-  font-size: 1.5rem;
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: #F09081;
-  text-decoration-thickness: 10px;
-  font-family: "Bodoni Moda", serif;
+  margin-bottom: 4rem;
+  height: 26rem;
 }
 #tech-skills p {
-  font-size: 0.8rem;
-  margin: 0rem 21rem;
+  font-size: 1rem;
+  margin: 0rem 20rem;
   text-align: center;
   font-family: "Source Sans Pro", sans-serif;
   color: grey;
   margin-bottom: 2rem;
 }
 
+h4 {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #F09081;
+  text-decoration-thickness: 10px;
+  font-family: "Bodoni Moda", serif;
+}
+
 .technologies {
   display: flex;
   justify-content: space-around;
-  padding: 0rem 5rem;
+  padding: 0rem 6rem;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   height: 6rem;
 }
 
 .technology-card {
-  height: 3rem;
+  height: 5rem;
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1.5rem 0rem;
 }
 .technology-card img {
-  height: 3rem;
+  height: 4rem;
   aspect-ratio: 1;
+  margin: 1rem;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F09081;
+}
+#projects h4 {
+  color: #0d0e10;
+  text-decoration-color: #f8d583;
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+  margin-bottom: 3rem;
+}
+.project-card-container .project-card {
+  border: 3px solid #F9F9FC;
+  background-color: #645e96;
+  height: 32rem;
+  width: 28rem;
   margin: 1rem;
 }
