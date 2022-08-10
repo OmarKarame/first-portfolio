@@ -7,7 +7,7 @@
 }
 
 .header {
-  padding: 1% 0%;
+  padding: 1rem;
   background-color: #645e96;
   display: flex;
   justify-content: space-around;
@@ -16,18 +16,24 @@
 }
 .header__h1 {
   color: #F9F9FC;
-  font-weight: 10;
+  font-size: 2rem;
+}
+.header__h2 {
+  font-size: 3rem;
+  padding-left: 9rem;
+  color: #F9F9FC;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 800;
 }
 .header__links {
   display: flex;
   align-items: center;
 }
 .header__link {
-  color: #F9F9FC;
-}
-.header__link {
   text-decoration: none;
-  margin: 0rem 0.6rem;
+  color: #F9F9FC;
+  margin: 0rem 1rem;
+  font-size: 1.2rem;
 }
 .header__button {
   font-family: "Source Sans Pro", sans-serif;
@@ -37,6 +43,7 @@
   padding: 5px 10px;
   border-radius: 10px;
   background-color: #f8d583;
+  font-size: 1rem;
 }
 
 .my-intro {
@@ -65,7 +72,7 @@
 .my-intro__info__h2--job {
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color: #3f1786;
+  text-decoration-color: #d17589;
   text-decoration-thickness: 35px;
 }
 .my-intro__info__button {
@@ -77,7 +84,7 @@
   border-radius: 10px;
   background-color: #f8d583;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 1rem;
 }
 .my-intro .my-intro__image {
   height: 100%;
@@ -188,8 +195,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
-  height: 40rem;
+  margin-bottom: 5rem;
+  height: 28rem;
 }
 .tech-skills__h4 {
   margin-top: 4rem;
@@ -234,7 +241,7 @@
 }
 
 h4 {
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 2rem;
   text-decoration-line: underline;
@@ -320,10 +327,12 @@ h4 {
   flex-direction: column;
   align-items: center;
   background-color: #F09081;
+  padding: 5rem 0rem;
 }
 .projects__h4 {
   color: #0d0e10;
   text-decoration-color: #f8d583;
+  margin-bottom: 6rem;
 }
 .projects__container {
   display: grid;
@@ -362,9 +371,70 @@ h4 {
   }
 }
 .projects__card {
-  border: 3px solid #F9F9FC;
+  border: 5px solid #3f1786;
   background-color: #645e96;
   height: 32rem;
   width: 28rem;
   margin: 1rem;
+  border-radius: 25px;
+  box-shadow: 8px 5px 10px #3f1786;
+  display: flex;
+  flex-direction: column;
+}
+.projects__card__info {
+  padding: 0.5rem;
+}
+.projects__card__h2 {
+  color: #f8d583;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+.projects__card__h1 {
+  color: #F9F9FC;
+  font-family: "Bodoni Moda", serif;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.projects__card__p {
+  color: #F9F9FC;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.projects__card__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 3rem;
+  margin: 0rem 1rem;
+  align-self: bottom;
+}
+.projects__card__a {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #0d0e10;
+  font-weight: 700;
+  border: 2px solid #3f1786;
+  padding: 7px 15px;
+  border-radius: 10px;
+  background-color: #f8d583;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+.projects__card__content {
+  max-width: 100%;
+  max-height: 274px;
+  background-color: #f8d583;
+  border-radius: 20px 20px 0px 0px;
+}
+.projects__card__img__adventure {
+  max-width: 100%;
+  aspect-ratio: auto;
+  border-radius: 20px 20px 0px 0px;
+}
+.projects__card__img {
+  max-width: 100%;
+  aspect-ratio: auto;
+  border-radius: 20px 20px 0px 0px;
 }

@@ -7,7 +7,7 @@
 }
 
 .header{
-    padding: 1% 0%;
+    padding: 1rem;
     background-color: $color-primary;
     display: flex;
     justify-content: space-around;
@@ -15,18 +15,24 @@
     font-family: $font-primary;
     &__h1{
         color: $color-white;
-        font-weight: 10;
+        font-size: 2rem;
+    }
+    &__h2{
+        font-size: 3rem;
+        padding-left: 9rem;
+        color: $color-white;
+        font-family: $font-primary;
+        font-weight: 800;
     }
     &__links{
         display: flex;
         align-items: center;
     }
     &__link{
-        color: $color-white;
-    }
-    &__link{
         text-decoration: none;
-        margin: 0rem 0.6rem;
+        color: $color-white;
+        margin: 0rem 1rem;
+        font-size: 1.2rem;
     }
     &__button{
         font-family: $font-tertiary;
@@ -36,6 +42,7 @@
         padding: 5px 10px;
         border-radius: 10px;
         background-color: $color-yellow-hints;
+        font-size: 1rem;
     }
 }
 
@@ -65,7 +72,7 @@
             &--job{
                 text-decoration-line: underline;
                 text-decoration-style: wavy;
-                text-decoration-color: $color-primary-hints;
+                text-decoration-color: $color-tertiary;
                 text-decoration-thickness: 35px;
             }
          }
@@ -78,7 +85,7 @@
             border-radius: 10px;
             background-color: $color-yellow-hints;
             margin-top: 10px;
-            font-size: 15px;
+            font-size: 1rem;
         }
     }
     .my-intro__image{
@@ -193,8 +200,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
-    height: 40rem;
+    margin-bottom: 5rem;
+    height: 28rem;
     &__h4{
         margin-top: 4rem;
         margin-bottom: 3rem;
@@ -237,7 +244,7 @@
 }
 
 h4{
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     font-size: 2rem;
     text-decoration-line: underline;
@@ -319,9 +326,11 @@ h4{
     flex-direction: column;
     align-items: center;
     background-color: $color-secondary;
+    padding: 5rem 0rem;
     &__h4{
         color: $color-black;
         text-decoration-color: $color-yellow-hints;
+        margin-bottom: 6rem;
     }
     &__container{
         display: grid;
@@ -356,17 +365,83 @@ h4{
         }
     }
     &__card{
-        border: 3px solid $color-white;
+        border: 5px solid $color-primary-hints;
         background-color: $color-primary;
         height: 32rem;
         width: 28rem;
         margin: 1rem;
+        border-radius: 25px;
+        box-shadow: 8px 5px 10px $color-primary-hints;
+        display: flex;
+        flex-direction: column;
+        &__info{
+            padding: 0.5rem;
+        }
+        &__h2{
+            color: $color-yellow-hints;
+            font-family: $font-tertiary;
+            font-size: 1.7rem;
+            font-weight: 100;
+        }
+        &__h1{
+            color: $color-white;
+            font-family: $font-primary;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        &__p{
+            color: $color-white;
+            font-family: $font-tertiary;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        &__links{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 3rem;
+            margin: 0rem 1rem;
+            align-self: bottom;
+        }
+        &__a{
+            font-family: $font-tertiary;
+            color: $color-black;
+            font-weight: 700;
+            border: 2px solid $color-primary-hints;
+            padding: 7px 15px;
+            border-radius: 10px;
+            background-color: $color-yellow-hints;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin: 0.5rem;
+        }
+        &__content{
+            max-width: 100%;
+            max-height: 274px;
+            background-color: $color-yellow-hints;
+            border-radius: 20px 20px 0px 0px;
+        }
+        &__img__adventure{
+            max-width: 100%;
+            aspect-ratio: auto;
+            border-radius: 20px 20px 0px 0px;
+        }
+        &__img{
+            max-width: 100%;
+            aspect-ratio: auto;
+            border-radius: 20px 20px 0px 0px;
+        }
     }
 }
 
 
-// Create an @media for smaller screen sizes for the project cards
-// In the media the display must be flex and the flex direction should be column
+// Fix BEM styling 
+// Use flex and direct it to a column and use align items to space around in the tech skills section
+// Create a hover element on each card to slowly become brighter and more opaque
+// also make the cards grow when hovering over them and make sure it is a slow process and it does'nt just grow or become bright.
+// Remove padding in the title when the media width is smaller
+
+
 // The sizes also must be reduced to about 80% of the width of the page while taking the same aspect ration as before with regards to the height (think of smthn)
 // Some projects to add to the website include
 // Check Github for project from second year
