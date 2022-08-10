@@ -1,60 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Mouse+Memoirs&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&family=Source+Sans+Pro&display=swap');
-
-$font-primary: "Bodoni Moda", serif;
-$font-secondary: "Cormorant", serif;
-$font-tertiary: "Source Sans Pro", sans-serif;
-
-$color-primary: #645e96;
-$color-primary-hints: #3f1786;
-$color-white: #F9F9FC;
-$color-black: #0d0e10;
-$color-secondary: #F09081;
-$color-tertiary: #d17589;
-$color-yellow-hints: #f8d583;
-
+@use 'fonts.scss';
+@use 'colors.scss';
 
 *{
     margin: 0;
     padding: 0;
 }
 
-header{
+.header{
     padding: 1% 0%;
     background-color: $color-primary;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: $font-primary;
-    h1{
+    &__h1{
         color: $color-white;
         font-weight: 10;
     }
-    .header-links{
+    &__links{
         display: flex;
         align-items: center;
-        a{
-            color: $color-white;
-        }
-        .individual-header-links{
-            text-decoration: none;
-            margin: 0rem 0.6rem;
-        }
-        button{
-            font-family: $font-tertiary;
-            color: $color-black;
-            font-weight: 700;
-            border: 2px solid $color-primary-hints;
-            padding: 5px 10px;
-            border-radius: 10px;
-            background-color: $color-yellow-hints;
-        }
+    }
+    &__link{
+        color: $color-white;
+    }
+    &__link{
+        text-decoration: none;
+        margin: 0rem 0.6rem;
+    }
+    &__button{
+        font-family: $font-tertiary;
+        color: $color-black;
+        font-weight: 700;
+        border: 2px solid $color-primary-hints;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: $color-yellow-hints;
     }
 }
 
 
-#my-intro{
+.my-intro{
     background-color: $color-white;
     // border: 5px solid red;
     display: flex;
@@ -63,27 +49,27 @@ header{
     background-color: $color-primary;
     aspect-ratio: 2.5;
     padding-top: 4%;
-    .my-intro-info{
+    &__info{
         //  border: 5px solid green;
          width: 40%;
          font-family: $font-secondary;
          margin: auto;
-         h3{
+         &__h3{
             font-size: 150%;
             color: $color-yellow-hints;
          }
-         h2{
+         &__h2{
             color: $color-white;
             font-size: 300%;
             font-weight: 900;
-            #job{
+            &--job{
                 text-decoration-line: underline;
                 text-decoration-style: wavy;
                 text-decoration-color: $color-primary-hints;
                 text-decoration-thickness: 35px;
             }
          }
-         button{
+         &__button{
             font-family: $font-tertiary;
             color: $color-black;
             font-weight: 700;
@@ -95,7 +81,7 @@ header{
             font-size: 15px;
         }
     }
-    .my-intro-image{
+    .my-intro__image{
         // border: 5px solid white;
         height: 100%;
         aspect-ratio: 1;
@@ -103,7 +89,7 @@ header{
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        .bubble{
+        &__big-bubble{
             background-color: $color-primary-hints;
             height: 100%;
             width: 100%;
@@ -113,47 +99,47 @@ header{
             margin-left: 2%;
             margin-top: 5%;
             box-shadow: 0px 0px 3px 8px $color-primary-hints;
-            img{
-                // margin-top: -10%;
-                margin-left: -10%;
-            }
             position: relative;
-            .small-bubble{
-                background-color: $color-yellow-hints;
-                height: 20%;
-                aspect-ratio: 1;
-                margin-top: 3%;
-                margin-left: -5%;
-                border-radius: 50%;
-                box-shadow: 0px 0px 3px 20px $color-yellow-hints;
-            }
+        }
+        &__small-bubble{
+            background-color: $color-yellow-hints;
+            height: 20%;
+            aspect-ratio: 1;
+            margin-top: 3%;
+            margin-left: -5%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 3px 20px $color-yellow-hints;
+        }
+        &__omar{
+            // margin-top: -10%;
+            margin-left: -10%;
         }
     }
     @media only screen and (max-width:1350px) {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        .my-intro-info{
+        .my-intro__info{
              //border: 5px solid green;
              width: 60%;
              margin-right: 40%;
              font-family: $font-secondary;
-             h3{
+             &__h3{
                 font-size: 100%;
                 color: $color-yellow-hints;
              }
-             h2{
+             &__h2{
                 color: $color-white;
                 font-size: 200%;
                 font-weight: 900;
-                #job{
+                &__job{
                     text-decoration-line: underline;
                     text-decoration-style: wavy;
                     text-decoration-color: $color-primary-hints;
                     text-decoration-thickness: 25px;
                 }
              }
-             button{
+             &__button{
                 font-family: $font-tertiary;
                 color: $color-black;
                 font-weight: 700;
@@ -165,7 +151,7 @@ header{
                 font-size: 12px;
             }
         }
-        .my-intro-image{
+        .my-intro__image{
             // border: 5px solid white;
             height: 100%;
             aspect-ratio: 1;
@@ -173,7 +159,7 @@ header{
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            .bubble{
+            &__big-bubble{
                 background-color: $color-primary-hints;
                 height: 90%;
                 aspect-ratio: 1;
@@ -183,33 +169,43 @@ header{
                 margin-left: 5%;
                 margin-top: 10%;
                 box-shadow: 0px 0px 3px 8px $color-primary-hints;
-                img{
-                    margin-top: 1%;
-                    margin-left: -5%;
-                }
-                position: relative;
-                .small-bubble{
-                    background-color: $color-yellow-hints;
-                    height: 20%;
-                    aspect-ratio: 1;
-                    margin-top: 3%;
-                    margin-left: 5%;
-                    border-radius: 50%;
-                    box-shadow: 0px 0px 3px 20px $color-yellow-hints;
-                }
+            }
+            &__omar{
+                margin-top: 1%;
+                margin-left: -5%;
+            }
+            position: relative;
+            &__small-bubble{
+                background-color: $color-yellow-hints;
+                height: 20%;
+                aspect-ratio: 1;
+                margin-top: 3%;
+                margin-left: 5%;
+                border-radius: 50%;
+                box-shadow: 0px 0px 3px 20px $color-yellow-hints;
             }
         }
     }
 }
 
-#tech-skills{
+.tech-skills{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
     height: 40rem;
-    p{
+    &__h4{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: $color-secondary;
+        text-decoration-thickness: 10px;
+        font-family: $font-primary;
+    }
+    &__p{
         font-size: 1rem;
         margin: 0rem 20rem;
         text-align: center;
@@ -218,7 +214,7 @@ header{
         margin-bottom: 2rem;
     }
     @media only screen and (max-width: 850px){
-        p{
+        &__p{
             font-size: 1rem;
             margin: 0rem 10rem;
             text-align: center;
@@ -229,7 +225,7 @@ header{
     }
     @media only screen and (max-width: 620px){
         height: 60rem;
-        p{
+        &__p{
             font-size: 1rem;
             margin: 0rem 10rem;
             text-align: center;
@@ -258,6 +254,19 @@ h4{
     font-family: $font-tertiary;
     font-size: 1rem;
     height: 6rem;
+    &__card{
+        height: 5rem;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem 0rem;
+        img{
+            height: 4rem;
+            aspect-ratio: 1;
+            margin: 1rem;
+        }
+    }
     @media only screen and (max-width: 850px){
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
@@ -266,7 +275,7 @@ h4{
         font-family: $font-tertiary;
         font-size: 1rem;
         height: 16rem;
-        .technology-card{
+        &__card{
             height: 5rem;
             aspect-ratio: 1;
             display: flex;
@@ -288,7 +297,7 @@ h4{
         font-family: $font-tertiary;
         font-size: 1rem;
         height: 30rem;
-        .technology-card{
+        &__card{
             height: 5rem;
             aspect-ratio: 1;
             display: flex;
@@ -304,71 +313,57 @@ h4{
     }
 }
 
-.technology-card{
-    height: 5rem;
-    aspect-ratio: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.5rem 0rem;
-    img{
-        height: 4rem;
-        aspect-ratio: 1;
-        margin: 1rem;
-    }
-}
-
-#projects{
+.projects{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: $color-secondary;
-    h4{
+    &__h4{
         color: $color-black;
         text-decoration-color: $color-yellow-hints;
     }
-}
-
-.project-card-container{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 50% 50%;
-    margin-bottom: 3rem;
-    .project-card{
+    &__container{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
+        margin-bottom: 3rem;
+        @media only screen and (max-width:1450px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 33% 33% 33%;
+            margin-bottom: 3rem;
+            .projects__card{
+                border: 3px solid $color-white;
+                background-color: $color-primary;
+                height: 32rem;
+                width: 28rem;
+                margin: 1rem;
+            }
+        }
+        @media only screen and (max-width:950px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .projects__card{
+                border: 3px solid $color-white;
+                background-color: $color-primary;
+                height: 32rem;
+                width: 28rem;
+                margin: 1rem;
+            }
+        }
+    }
+    &__card{
         border: 3px solid $color-white;
         background-color: $color-primary;
         height: 32rem;
         width: 28rem;
         margin: 1rem;
     }
-    @media only screen and (max-width:1450px) {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 33% 33% 33%;
-        margin-bottom: 3rem;
-        .project-card{
-            border: 3px solid $color-white;
-            background-color: $color-primary;
-            height: 32rem;
-            width: 28rem;
-            margin: 1rem;
-        }
-    }
-    @media only screen and (max-width:950px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        .project-card{
-            border: 3px solid $color-white;
-            background-color: $color-primary;
-            height: 32rem;
-            width: 28rem;
-            margin: 1rem;
-        }
-    }
 }
+
 
 // Create an @media for smaller screen sizes for the project cards
 // In the media the display must be flex and the flex direction should be column

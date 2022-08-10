@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-header {
+.header {
   padding: 1% 0%;
   background-color: #645e96;
   display: flex;
@@ -14,22 +14,22 @@ header {
   align-items: center;
   font-family: "Bodoni Moda", serif;
 }
-header h1 {
+.header__h1 {
   color: #F9F9FC;
   font-weight: 10;
 }
-header .header-links {
+.header__links {
   display: flex;
   align-items: center;
 }
-header .header-links a {
+.header__link {
   color: #F9F9FC;
 }
-header .header-links .individual-header-links {
+.header__link {
   text-decoration: none;
   margin: 0rem 0.6rem;
 }
-header .header-links button {
+.header__button {
   font-family: "Source Sans Pro", sans-serif;
   color: #0d0e10;
   font-weight: 700;
@@ -39,7 +39,7 @@ header .header-links button {
   background-color: #f8d583;
 }
 
-#my-intro {
+.my-intro {
   background-color: #F9F9FC;
   display: flex;
   justify-content: space-between;
@@ -48,27 +48,27 @@ header .header-links button {
   aspect-ratio: 2.5;
   padding-top: 4%;
 }
-#my-intro .my-intro-info {
+.my-intro__info {
   width: 40%;
   font-family: "Cormorant", serif;
   margin: auto;
 }
-#my-intro .my-intro-info h3 {
+.my-intro__info__h3 {
   font-size: 150%;
   color: #f8d583;
 }
-#my-intro .my-intro-info h2 {
+.my-intro__info__h2 {
   color: #F9F9FC;
   font-size: 300%;
   font-weight: 900;
 }
-#my-intro .my-intro-info h2 #job {
+.my-intro__info__h2--job {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #3f1786;
   text-decoration-thickness: 35px;
 }
-#my-intro .my-intro-info button {
+.my-intro__info__button {
   font-family: "Source Sans Pro", sans-serif;
   color: #0d0e10;
   font-weight: 700;
@@ -79,7 +79,7 @@ header .header-links button {
   margin-top: 10px;
   font-size: 15px;
 }
-#my-intro .my-intro-image {
+.my-intro .my-intro__image {
   height: 100%;
   aspect-ratio: 1;
   display: flex;
@@ -87,7 +87,7 @@ header .header-links button {
   justify-content: center;
   overflow: hidden;
 }
-#my-intro .my-intro-image .bubble {
+.my-intro .my-intro__image__big-bubble {
   background-color: #3f1786;
   height: 100%;
   width: 100%;
@@ -99,10 +99,7 @@ header .header-links button {
   box-shadow: 0px 0px 3px 8px #3f1786;
   position: relative;
 }
-#my-intro .my-intro-image .bubble img {
-  margin-left: -10%;
-}
-#my-intro .my-intro-image .bubble .small-bubble {
+.my-intro .my-intro__image__small-bubble {
   background-color: #f8d583;
   height: 20%;
   aspect-ratio: 1;
@@ -111,33 +108,36 @@ header .header-links button {
   border-radius: 50%;
   box-shadow: 0px 0px 3px 20px #f8d583;
 }
+.my-intro .my-intro__image__omar {
+  margin-left: -10%;
+}
 @media only screen and (max-width: 1350px) {
-  #my-intro {
+  .my-intro {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  #my-intro .my-intro-info {
+  .my-intro .my-intro__info {
     width: 60%;
     margin-right: 40%;
     font-family: "Cormorant", serif;
   }
-  #my-intro .my-intro-info h3 {
+  .my-intro .my-intro__info__h3 {
     font-size: 100%;
     color: #f8d583;
   }
-  #my-intro .my-intro-info h2 {
+  .my-intro .my-intro__info__h2 {
     color: #F9F9FC;
     font-size: 200%;
     font-weight: 900;
   }
-  #my-intro .my-intro-info h2 #job {
+  .my-intro .my-intro__info__h2__job {
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: #3f1786;
     text-decoration-thickness: 25px;
   }
-  #my-intro .my-intro-info button {
+  .my-intro .my-intro__info__button {
     font-family: "Source Sans Pro", sans-serif;
     color: #0d0e10;
     font-weight: 700;
@@ -148,15 +148,16 @@ header .header-links button {
     margin-top: 10px;
     font-size: 12px;
   }
-  #my-intro .my-intro-image {
+  .my-intro .my-intro__image {
     height: 100%;
     aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
   }
-  #my-intro .my-intro-image .bubble {
+  .my-intro .my-intro__image__big-bubble {
     background-color: #3f1786;
     height: 90%;
     aspect-ratio: 1;
@@ -166,13 +167,12 @@ header .header-links button {
     margin-left: 5%;
     margin-top: 10%;
     box-shadow: 0px 0px 3px 8px #3f1786;
-    position: relative;
   }
-  #my-intro .my-intro-image .bubble img {
+  .my-intro .my-intro__image__omar {
     margin-top: 1%;
     margin-left: -5%;
   }
-  #my-intro .my-intro-image .bubble .small-bubble {
+  .my-intro .my-intro__image__small-bubble {
     background-color: #f8d583;
     height: 20%;
     aspect-ratio: 1;
@@ -183,7 +183,7 @@ header .header-links button {
   }
 }
 
-#tech-skills {
+.tech-skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,7 +191,17 @@ header .header-links button {
   margin-bottom: 4rem;
   height: 40rem;
 }
-#tech-skills p {
+.tech-skills__h4 {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #F09081;
+  text-decoration-thickness: 10px;
+  font-family: "Bodoni Moda", serif;
+}
+.tech-skills__p {
   font-size: 1rem;
   margin: 0rem 20rem;
   text-align: center;
@@ -200,7 +210,7 @@ header .header-links button {
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 850px) {
-  #tech-skills p {
+  .tech-skills__p {
     font-size: 1rem;
     margin: 0rem 10rem;
     text-align: center;
@@ -210,10 +220,10 @@ header .header-links button {
   }
 }
 @media only screen and (max-width: 620px) {
-  #tech-skills {
+  .tech-skills {
     height: 60rem;
   }
-  #tech-skills p {
+  .tech-skills__p {
     font-size: 1rem;
     margin: 0rem 10rem;
     text-align: center;
@@ -242,6 +252,19 @@ h4 {
   font-size: 1rem;
   height: 6rem;
 }
+.technologies__card {
+  height: 5rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0rem;
+}
+.technologies__card img {
+  height: 4rem;
+  aspect-ratio: 1;
+  margin: 1rem;
+}
 @media only screen and (max-width: 850px) {
   .technologies {
     display: grid;
@@ -252,7 +275,7 @@ h4 {
     font-size: 1rem;
     height: 16rem;
   }
-  .technologies .technology-card {
+  .technologies__card {
     height: 5rem;
     aspect-ratio: 1;
     display: flex;
@@ -260,7 +283,7 @@ h4 {
     align-items: center;
     margin: 0rem 2rem;
   }
-  .technologies .technology-card img {
+  .technologies__card img {
     height: 4rem;
     aspect-ratio: 1;
     margin: 1rem;
@@ -276,7 +299,7 @@ h4 {
     font-size: 1rem;
     height: 30rem;
   }
-  .technologies .technology-card {
+  .technologies__card {
     height: 5rem;
     aspect-ratio: 1;
     display: flex;
@@ -284,60 +307,38 @@ h4 {
     align-items: center;
     margin: 0rem 2rem;
   }
-  .technologies .technology-card img {
+  .technologies__card img {
     height: 4rem;
     aspect-ratio: 1;
     margin: 1rem;
   }
 }
 
-.technology-card {
-  height: 5rem;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1.5rem 0rem;
-}
-.technology-card img {
-  height: 4rem;
-  aspect-ratio: 1;
-  margin: 1rem;
-}
-
-#projects {
+.projects {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #F09081;
 }
-#projects h4 {
+.projects__h4 {
   color: #0d0e10;
   text-decoration-color: #f8d583;
 }
-
-.project-card-container {
+.projects__container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 50% 50%;
   margin-bottom: 3rem;
 }
-.project-card-container .project-card {
-  border: 3px solid #F9F9FC;
-  background-color: #645e96;
-  height: 32rem;
-  width: 28rem;
-  margin: 1rem;
-}
 @media only screen and (max-width: 1450px) {
-  .project-card-container {
+  .projects__container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% 33%;
     margin-bottom: 3rem;
   }
-  .project-card-container .project-card {
+  .projects__container .projects__card {
     border: 3px solid #F9F9FC;
     background-color: #645e96;
     height: 32rem;
@@ -346,17 +347,24 @@ h4 {
   }
 }
 @media only screen and (max-width: 950px) {
-  .project-card-container {
+  .projects__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
-  .project-card-container .project-card {
+  .projects__container .projects__card {
     border: 3px solid #F9F9FC;
     background-color: #645e96;
     height: 32rem;
     width: 28rem;
     margin: 1rem;
   }
+}
+.projects__card {
+  border: 3px solid #F9F9FC;
+  background-color: #645e96;
+  height: 32rem;
+  width: 28rem;
+  margin: 1rem;
 }
