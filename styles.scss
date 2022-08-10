@@ -1,5 +1,5 @@
-@use 'fonts.scss';
-@use 'colors.scss';
+@use './sass/base/_colors.scss' as *;
+@use './sass/base/_fonts.scss' as *;
 
 *{
     margin: 0;
