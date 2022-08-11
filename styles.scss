@@ -386,7 +386,7 @@ h4{
     &__h2{
         color: $color-yellow-hints;
         font-family: $font-tertiary;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 100;
     }
     &__h1{
@@ -423,11 +423,27 @@ h4{
     }
     &__content{
         max-width: 100%;
-        max-height: 234px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 234px;
         background-color: $color-yellow-hints;
     }
     &__img--adventure{
-        max-width: 100%;
+        max-width: 90%;
+        padding: 10% 0%;
+        aspect-ratio: auto;
+    }
+    &__img--weather-app{
+        max-height: 90%;
+        aspect-ratio: auto;
+    }
+    &__img--flat-finder{
+        max-height: 90%;
+        aspect-ratio: auto;
+    }
+    &__img--gym-planner{
+        max-height: 90%;
         aspect-ratio: auto;
     }
     &__img{
@@ -443,12 +459,6 @@ h4{
 // also make the cards grow when hovering over them and make sure it is a slow process and it does'nt just grow or become bright.
 // Remove padding in the title when the media width is smaller
 
-
-// The sizes also must be reduced to about 80% of the width of the page while taking the same aspect ration as before with regards to the height (think of smthn)
-// Some projects to add to the website include
-// Check Github for project from second year
-// Weather app
-// Java Adventure Game
 // Client Project
 // Rest API
 
