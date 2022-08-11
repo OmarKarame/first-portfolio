@@ -42,7 +42,7 @@
         padding: 5px 10px;
         border-radius: 10px;
         background-color: $color-yellow-hints;
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -61,32 +61,32 @@
          width: 40%;
          font-family: $font-secondary;
          margin: auto;
-         &__h3{
-            font-size: 150%;
-            color: $color-yellow-hints;
-         }
-         &__h2{
-            color: $color-white;
-            font-size: 300%;
-            font-weight: 900;
-            &--job{
-                text-decoration-line: underline;
-                text-decoration-style: wavy;
-                text-decoration-color: $color-tertiary;
-                text-decoration-thickness: 35px;
-            }
-         }
-         &__button{
-            font-family: $font-tertiary;
-            color: $color-black;
-            font-weight: 700;
-            border: 2px solid $color-primary-hints;
-            padding: 10px 15px;
-            border-radius: 10px;
-            background-color: $color-yellow-hints;
-            margin-top: 10px;
-            font-size: 1rem;
+    }
+    &__h3{
+        font-size: 150%;
+        color: $color-yellow-hints;
+     }
+    &__h2{
+        color: $color-white;
+        font-size: 300%;
+        font-weight: 900;
+        &--job{
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: $color-tertiary;
+            text-decoration-thickness: 35px;
         }
+     }
+     &__button{
+        font-family: $font-tertiary;
+        color: $color-black;
+        font-weight: 700;
+        border: 2px solid $color-primary-hints;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: $color-yellow-hints;
+        margin-top: 10px;
+        font-size: 1rem;
     }
     .my-intro__image{
         // border: 5px solid white;
@@ -96,7 +96,8 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        &__big-bubble{
+    }
+    &__big-bubble{
             background-color: $color-primary-hints;
             height: 100%;
             width: 100%;
@@ -107,8 +108,8 @@
             margin-top: 5%;
             box-shadow: 0px 0px 3px 8px $color-primary-hints;
             position: relative;
-        }
-        &__small-bubble{
+    }
+    &__small-bubble{
             background-color: $color-yellow-hints;
             height: 20%;
             aspect-ratio: 1;
@@ -116,21 +117,22 @@
             margin-left: -5%;
             border-radius: 50%;
             box-shadow: 0px 0px 3px 20px $color-yellow-hints;
-        }
-        &__omar{
+    }
+    &__omar{
             // margin-top: -10%;
             margin-left: -10%;
-        }
     }
     @media only screen and (max-width:1350px) {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        .my-intro__info{
-             //border: 5px solid green;
-             width: 60%;
-             margin-right: 40%;
-             font-family: $font-secondary;
+        .my-intro{
+            &__info{
+                //border: 5px solid green;
+                width: 60%;
+                margin-right: 40%;
+                font-family: $font-secondary;
+            }
              &__h3{
                 font-size: 100%;
                 color: $color-yellow-hints;
@@ -139,10 +141,9 @@
                 color: $color-white;
                 font-size: 200%;
                 font-weight: 900;
-                &__job{
+                &--job{
                     text-decoration-line: underline;
                     text-decoration-style: wavy;
-                    text-decoration-color: $color-primary-hints;
                     text-decoration-thickness: 25px;
                 }
              }
@@ -158,14 +159,16 @@
                 font-size: 12px;
             }
         }
-        .my-intro__image{
-            // border: 5px solid white;
-            height: 100%;
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .my-intro{
+            &__image{
+                // border: 5px solid white;
+                height: 100%;
+                aspect-ratio: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
             &__big-bubble{
                 background-color: $color-primary-hints;
                 height: 90%;
@@ -180,6 +183,7 @@
             &__omar{
                 margin-top: 1%;
                 margin-left: -5%;
+                // aspect-ratio: 1;
             }
             position: relative;
             &__small-bubble{
@@ -208,7 +212,7 @@
         font-size: 2rem;
         text-decoration-line: underline;
         text-decoration-style: wavy;
-        text-decoration-color: $color-secondary;
+        text-decoration-color: $color-yellow-hints;
         text-decoration-thickness: 10px;
         font-family: $font-primary;
     }
@@ -325,11 +329,11 @@ h4{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: $color-secondary;
+    background-color: $color-primary;
     padding: 5rem 0rem;
     &__h4{
-        color: $color-black;
-        text-decoration-color: $color-yellow-hints;
+        color: $color-white;
+        text-decoration-color: $color-tertiary;
         margin-bottom: 6rem;
     }
     &__container{
@@ -342,95 +346,93 @@ h4{
             grid-template-columns: 50% 50%;
             grid-template-rows: 33% 33% 33%;
             margin-bottom: 3rem;
-            .projects__card{
-                border: 3px solid $color-white;
-                background-color: $color-primary;
-                height: 32rem;
-                width: 28rem;
-                margin: 1rem;
-            }
         }
         @media only screen and (max-width:950px) {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            .projects__card{
-                border: 3px solid $color-white;
-                background-color: $color-primary;
-                height: 32rem;
-                width: 28rem;
-                margin: 1rem;
-            }
         }
     }
-    &__card{
-        border: 5px solid $color-primary-hints;
-        background-color: $color-primary;
+    &__card--pink{
+        border: 2px solid $color-primary-hints;
+        background-color: $color-tertiary;
         height: 32rem;
-        width: 28rem;
-        margin: 1rem;
-        border-radius: 25px;
-        box-shadow: 8px 5px 10px $color-primary-hints;
+        width: 24rem;
+        margin: 2.5rem;
+        box-shadow: 8px 5px 20px $color-primary-hints;
         display: flex;
         flex-direction: column;
-        &__info{
-            padding: 0.5rem;
-        }
-        &__h2{
-            color: $color-yellow-hints;
-            font-family: $font-tertiary;
-            font-size: 1.7rem;
-            font-weight: 100;
-        }
-        &__h1{
-            color: $color-white;
-            font-family: $font-primary;
-            font-size: 2rem;
-            font-weight: 800;
-        }
-        &__p{
-            color: $color-white;
-            font-family: $font-tertiary;
-            font-size: 1rem;
-            font-weight: 200;
-        }
-        &__links{
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            height: 3rem;
-            margin: 0rem 1rem;
-            align-self: bottom;
-        }
-        &__a{
-            font-family: $font-tertiary;
-            color: $color-black;
-            font-weight: 700;
-            border: 2px solid $color-primary-hints;
-            padding: 7px 15px;
-            border-radius: 10px;
-            background-color: $color-yellow-hints;
-            font-size: 1.2rem;
-            text-decoration: none;
-            margin: 0.5rem;
-        }
-        &__content{
-            max-width: 100%;
-            max-height: 274px;
-            background-color: $color-yellow-hints;
-            border-radius: 20px 20px 0px 0px;
-        }
-        &__img__adventure{
-            max-width: 100%;
-            aspect-ratio: auto;
-            border-radius: 20px 20px 0px 0px;
-        }
-        &__img{
-            max-width: 100%;
-            aspect-ratio: auto;
-            border-radius: 20px 20px 0px 0px;
-        }
+    }
+    &__card--blue{
+        border: 2px solid $color-primary-hints;
+        background-color: $color-blue-hints;
+        height: 32rem;
+        width: 24rem;
+        margin: 2.5rem;
+        box-shadow: 8px 5px 20px $color-primary-hints;
+        display: flex;
+        flex-direction: column;
+    }
+    &__bottom-section{
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__info{
+        padding: 0.5rem;
+    }
+    &__h2{
+        color: $color-yellow-hints;
+        font-family: $font-tertiary;
+        font-size: 1.7rem;
+        font-weight: 100;
+    }
+    &__h1{
+        color: $color-white;
+        font-family: $font-primary;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    &__p{
+        color: $color-white;
+        font-family: $font-tertiary;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 3rem;
+        margin: 0rem 1rem;
+        align-self: bottom;
+    }
+    &__a{
+        font-family: $font-tertiary;
+        color: $color-black;
+        font-weight: 700;
+        border: 2px solid $color-primary-hints;
+        padding: 7px 15px;
+        background-color: $color-yellow-hints;
+        font-size: 1.2rem;
+        text-decoration: none;
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+    &__content{
+        max-width: 100%;
+        max-height: 234px;
+        background-color: $color-yellow-hints;
+    }
+    &__img--adventure{
+        max-width: 100%;
+        aspect-ratio: auto;
+    }
+    &__img{
+        max-width: 100%;
+        aspect-ratio: auto;
     }
 }
 
@@ -447,7 +449,6 @@ h4{
 // Check Github for project from second year
 // Weather app
 // Java Adventure Game
-// GymPlanner Website
 // Client Project
 // Rest API
 

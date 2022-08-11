@@ -43,7 +43,7 @@
   padding: 5px 10px;
   border-radius: 10px;
   background-color: #f8d583;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 .my-intro {
@@ -60,22 +60,22 @@
   font-family: "Cormorant", serif;
   margin: auto;
 }
-.my-intro__info__h3 {
+.my-intro__h3 {
   font-size: 150%;
   color: #f8d583;
 }
-.my-intro__info__h2 {
+.my-intro__h2 {
   color: #F9F9FC;
   font-size: 300%;
   font-weight: 900;
 }
-.my-intro__info__h2--job {
+.my-intro__h2--job {
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color: #d17589;
+  text-decoration-color: #b8557a;
   text-decoration-thickness: 35px;
 }
-.my-intro__info__button {
+.my-intro__button {
   font-family: "Source Sans Pro", sans-serif;
   color: #0d0e10;
   font-weight: 700;
@@ -94,7 +94,7 @@
   justify-content: center;
   overflow: hidden;
 }
-.my-intro .my-intro__image__big-bubble {
+.my-intro__big-bubble {
   background-color: #3f1786;
   height: 100%;
   width: 100%;
@@ -106,7 +106,7 @@
   box-shadow: 0px 0px 3px 8px #3f1786;
   position: relative;
 }
-.my-intro .my-intro__image__small-bubble {
+.my-intro__small-bubble {
   background-color: #f8d583;
   height: 20%;
   aspect-ratio: 1;
@@ -115,7 +115,7 @@
   border-radius: 50%;
   box-shadow: 0px 0px 3px 20px #f8d583;
 }
-.my-intro .my-intro__image__omar {
+.my-intro__omar {
   margin-left: -10%;
 }
 @media only screen and (max-width: 1350px) {
@@ -129,22 +129,21 @@
     margin-right: 40%;
     font-family: "Cormorant", serif;
   }
-  .my-intro .my-intro__info__h3 {
+  .my-intro .my-intro__h3 {
     font-size: 100%;
     color: #f8d583;
   }
-  .my-intro .my-intro__info__h2 {
+  .my-intro .my-intro__h2 {
     color: #F9F9FC;
     font-size: 200%;
     font-weight: 900;
   }
-  .my-intro .my-intro__info__h2__job {
+  .my-intro .my-intro__h2--job {
     text-decoration-line: underline;
     text-decoration-style: wavy;
-    text-decoration-color: #3f1786;
     text-decoration-thickness: 25px;
   }
-  .my-intro .my-intro__info__button {
+  .my-intro .my-intro__button {
     font-family: "Source Sans Pro", sans-serif;
     color: #0d0e10;
     font-weight: 700;
@@ -155,6 +154,9 @@
     margin-top: 10px;
     font-size: 12px;
   }
+  .my-intro .my-intro {
+    position: relative;
+  }
   .my-intro .my-intro__image {
     height: 100%;
     aspect-ratio: 1;
@@ -162,9 +164,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
   }
-  .my-intro .my-intro__image__big-bubble {
+  .my-intro .my-intro__big-bubble {
     background-color: #3f1786;
     height: 90%;
     aspect-ratio: 1;
@@ -175,11 +176,11 @@
     margin-top: 10%;
     box-shadow: 0px 0px 3px 8px #3f1786;
   }
-  .my-intro .my-intro__image__omar {
+  .my-intro .my-intro__omar {
     margin-top: 1%;
     margin-left: -5%;
   }
-  .my-intro .my-intro__image__small-bubble {
+  .my-intro .my-intro__small-bubble {
     background-color: #f8d583;
     height: 20%;
     aspect-ratio: 1;
@@ -204,7 +205,7 @@
   font-size: 2rem;
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color: #F09081;
+  text-decoration-color: #f8d583;
   text-decoration-thickness: 10px;
   font-family: "Bodoni Moda", serif;
 }
@@ -326,12 +327,12 @@ h4 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #F09081;
+  background-color: #645e96;
   padding: 5rem 0rem;
 }
 .projects__h4 {
-  color: #0d0e10;
-  text-decoration-color: #f8d583;
+  color: #F9F9FC;
+  text-decoration-color: #b8557a;
   margin-bottom: 6rem;
 }
 .projects__container {
@@ -347,13 +348,6 @@ h4 {
     grid-template-rows: 33% 33% 33%;
     margin-bottom: 3rem;
   }
-  .projects__container .projects__card {
-    border: 3px solid #F9F9FC;
-    background-color: #645e96;
-    height: 32rem;
-    width: 28rem;
-    margin: 1rem;
-  }
 }
 @media only screen and (max-width: 950px) {
   .projects__container {
@@ -362,47 +356,55 @@ h4 {
     align-items: center;
     justify-content: space-around;
   }
-  .projects__container .projects__card {
-    border: 3px solid #F9F9FC;
-    background-color: #645e96;
-    height: 32rem;
-    width: 28rem;
-    margin: 1rem;
-  }
 }
-.projects__card {
-  border: 5px solid #3f1786;
-  background-color: #645e96;
+.projects__card--pink {
+  border: 2px solid #3f1786;
+  background-color: #b8557a;
   height: 32rem;
-  width: 28rem;
-  margin: 1rem;
-  border-radius: 25px;
-  box-shadow: 8px 5px 10px #3f1786;
+  width: 24rem;
+  margin: 2.5rem;
+  box-shadow: 8px 5px 20px #3f1786;
   display: flex;
   flex-direction: column;
 }
-.projects__card__info {
+.projects__card--blue {
+  border: 2px solid #3f1786;
+  background-color: #787bd1;
+  height: 32rem;
+  width: 24rem;
+  margin: 2.5rem;
+  box-shadow: 8px 5px 20px #3f1786;
+  display: flex;
+  flex-direction: column;
+}
+.projects__bottom-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects__info {
   padding: 0.5rem;
 }
-.projects__card__h2 {
+.projects__h2 {
   color: #f8d583;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.7rem;
   font-weight: 100;
 }
-.projects__card__h1 {
+.projects__h1 {
   color: #F9F9FC;
   font-family: "Bodoni Moda", serif;
   font-size: 2rem;
   font-weight: 800;
 }
-.projects__card__p {
+.projects__p {
   color: #F9F9FC;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 200;
 }
-.projects__card__links {
+.projects__links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -410,31 +412,28 @@ h4 {
   margin: 0rem 1rem;
   align-self: bottom;
 }
-.projects__card__a {
+.projects__a {
   font-family: "Source Sans Pro", sans-serif;
   color: #0d0e10;
   font-weight: 700;
   border: 2px solid #3f1786;
   padding: 7px 15px;
-  border-radius: 10px;
   background-color: #f8d583;
   font-size: 1.2rem;
   text-decoration: none;
   margin: 0.5rem;
+  border-radius: 10px;
 }
-.projects__card__content {
+.projects__content {
   max-width: 100%;
-  max-height: 274px;
+  max-height: 234px;
   background-color: #f8d583;
-  border-radius: 20px 20px 0px 0px;
 }
-.projects__card__img__adventure {
+.projects__img--adventure {
   max-width: 100%;
   aspect-ratio: auto;
-  border-radius: 20px 20px 0px 0px;
 }
-.projects__card__img {
+.projects__img {
   max-width: 100%;
   aspect-ratio: auto;
-  border-radius: 20px 20px 0px 0px;
 }
