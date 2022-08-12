@@ -42,7 +42,12 @@
         padding: 5px 10px;
         border-radius: 10px;
         background-color: $color-yellow-hints;
-        font-size: 0.7rem;
+        font-size: 1rem;
+    }
+    @media only screen and (max-width:1450px){
+        &__h2{
+            padding: 0;
+        }       
     }
 }
 
@@ -55,7 +60,6 @@
     align-items: center;
     background-color: $color-primary;
     aspect-ratio: 2.5;
-    padding-top: 4%;
     &__info{
         //  border: 5px solid green;
          width: 40%;
@@ -265,6 +269,7 @@ h4{
     font-family: $font-tertiary;
     font-size: 1rem;
     height: 6rem;
+    background-color: white;
     &__card{
         height: 5rem;
         aspect-ratio: 1;
@@ -452,9 +457,43 @@ h4{
     }
 }
 
+.about-me{
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0rem;
+    &__imagery{
+        width: 40%;
+        aspect-ratio: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__info{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0rem 2rem;
+    }
+    &__h6{
+        margin-bottom: 3rem;
+        font-size: 3rem;
+        text-decoration-color: $color-secondary;
+        font-family: $font-primary;
+    }
+    &__h7{
+        font-family: $font-tertiary;
+        font-size: 1.2rem;
+    }
+}
 
-// Fix BEM styling 
-// Use flex and direct it to a column and use align items to space around in the tech skills section
+.footer{
+    background-color: $color-blue-hints;
+    height: 4.5rem;
+}
+
 // Create a hover element on each card to slowly become brighter and more opaque
 // also make the cards grow when hovering over them and make sure it is a slow process and it does'nt just grow or become bright.
 // Remove padding in the title when the media width is smaller

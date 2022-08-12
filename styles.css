@@ -15,13 +15,13 @@
   font-family: "Bodoni Moda", serif;
 }
 .header__h1 {
-  color: #F9F9FC;
+  color: #FaFaFb;
   font-size: 2rem;
 }
 .header__h2 {
   font-size: 3rem;
   padding-left: 9rem;
-  color: #F9F9FC;
+  color: #FaFaFb;
   font-family: "Bodoni Moda", serif;
   font-weight: 800;
 }
@@ -31,7 +31,7 @@
 }
 .header__link {
   text-decoration: none;
-  color: #F9F9FC;
+  color: #FaFaFb;
   margin: 0rem 1rem;
   font-size: 1.2rem;
 }
@@ -43,17 +43,21 @@
   padding: 5px 10px;
   border-radius: 10px;
   background-color: #f8d583;
-  font-size: 0.7rem;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 1450px) {
+  .header__h2 {
+    padding: 0;
+  }
 }
 
 .my-intro {
-  background-color: #F9F9FC;
+  background-color: #FaFaFb;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #645e96;
   aspect-ratio: 2.5;
-  padding-top: 4%;
 }
 .my-intro__info {
   width: 40%;
@@ -65,7 +69,7 @@
   color: #f8d583;
 }
 .my-intro__h2 {
-  color: #F9F9FC;
+  color: #FaFaFb;
   font-size: 300%;
   font-weight: 900;
 }
@@ -134,7 +138,7 @@
     color: #f8d583;
   }
   .my-intro .my-intro__h2 {
-    color: #F9F9FC;
+    color: #FaFaFb;
     font-size: 200%;
     font-weight: 900;
   }
@@ -259,6 +263,7 @@ h4 {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   height: 6rem;
+  background-color: white;
 }
 .technologies__card {
   height: 5rem;
@@ -331,7 +336,7 @@ h4 {
   padding: 5rem 0rem;
 }
 .projects__h4 {
-  color: #F9F9FC;
+  color: #FaFaFb;
   text-decoration-color: #b8557a;
   margin-bottom: 6rem;
 }
@@ -393,13 +398,13 @@ h4 {
   font-weight: 100;
 }
 .projects__h1 {
-  color: #F9F9FC;
+  color: #FaFaFb;
   font-family: "Bodoni Moda", serif;
   font-size: 2rem;
   font-weight: 800;
 }
 .projects__p {
-  color: #F9F9FC;
+  color: #FaFaFb;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 200;
@@ -452,4 +457,41 @@ h4 {
 .projects__img {
   max-width: 100%;
   aspect-ratio: auto;
+}
+
+.about-me {
+  background-color: #FaFaFb;
+  display: flex;
+  justify-content: space-around;
+  padding: 8rem 0rem;
+}
+.about-me__imagery {
+  width: 40%;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me__info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0rem 2rem;
+}
+.about-me__h6 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-decoration-color: #F09081;
+  font-family: "Bodoni Moda", serif;
+}
+.about-me__h7 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+}
+
+.footer {
+  background-color: #787bd1;
+  height: 4.5rem;
 }
