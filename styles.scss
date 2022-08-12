@@ -1,60 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Mouse+Memoirs&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant&family=Mouse+Memoirs&family=Roboto&family=Source+Sans+Pro&display=swap');
-
-$font-primary: "Bodoni Moda", serif;
-$font-secondary: "Cormorant", serif;
-$font-tertiary: "Source Sans Pro", sans-serif;
-
-$color-primary: #645e96;
-$color-primary-hints: #3f1786;
-$color-white: #F9F9FC;
-$color-black: #0d0e10;
-$color-secondary: #F09081;
-$color-tertiary: #d17589;
-$color-yellow-hints: #f8d583;
-
+@use './sass/base/_colors.scss' as *;
+@use './sass/base/_fonts.scss' as *;
 
 *{
     margin: 0;
     padding: 0;
 }
 
-header{
-    padding: 1% 0%;
+.header{
+    padding: 1rem;
     background-color: $color-primary;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: $font-primary;
-    h1{
+    &__h1{
         color: $color-white;
-        font-weight: 10;
+        font-size: 2rem;
     }
-    .header-links{
+    &__h2{
+        font-size: 3rem;
+        padding-left: 9rem;
+        color: $color-white;
+        font-family: $font-primary;
+        font-weight: 800;
+    }
+    &__links{
         display: flex;
         align-items: center;
-        a{
-            color: $color-white;
-        }
-        .individual-header-links{
-            text-decoration: none;
-            margin: 0rem 0.6rem;
-        }
-        button{
-            font-family: $font-tertiary;
-            color: $color-black;
-            font-weight: 700;
-            border: 2px solid $color-primary-hints;
-            padding: 5px 10px;
-            border-radius: 10px;
-            background-color: $color-yellow-hints;
-        }
+    }
+    &__link{
+        text-decoration: none;
+        color: $color-white;
+        margin: 0rem 1rem;
+        font-size: 1.2rem;
+    }
+    &__button{
+        font-family: $font-tertiary;
+        color: $color-black;
+        font-weight: 700;
+        border: 2px solid $color-primary-hints;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: $color-yellow-hints;
+        font-size: 1rem;
+    }
+    @media only screen and (max-width:1450px){
+        &__h2{
+            padding: 0;
+        }       
     }
 }
 
 
-#my-intro{
+.my-intro{
     background-color: $color-white;
     // border: 5px solid red;
     display: flex;
@@ -62,40 +60,39 @@ header{
     align-items: center;
     background-color: $color-primary;
     aspect-ratio: 2.5;
-    padding-top: 4%;
-    .my-intro-info{
+    &__info{
         //  border: 5px solid green;
          width: 40%;
          font-family: $font-secondary;
          margin: auto;
-         h3{
-            font-size: 150%;
-            color: $color-yellow-hints;
-         }
-         h2{
-            color: $color-white;
-            font-size: 300%;
-            font-weight: 900;
-            #job{
-                text-decoration-line: underline;
-                text-decoration-style: wavy;
-                text-decoration-color: $color-primary-hints;
-                text-decoration-thickness: 35px;
-            }
-         }
-         button{
-            font-family: $font-tertiary;
-            color: $color-black;
-            font-weight: 700;
-            border: 2px solid $color-primary-hints;
-            padding: 10px 15px;
-            border-radius: 10px;
-            background-color: $color-yellow-hints;
-            margin-top: 10px;
-            font-size: 15px;
-        }
     }
-    .my-intro-image{
+    &__h3{
+        font-size: 150%;
+        color: $color-yellow-hints;
+     }
+    &__h2{
+        color: $color-white;
+        font-size: 300%;
+        font-weight: 900;
+        &--job{
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: $color-tertiary;
+            text-decoration-thickness: 35px;
+        }
+     }
+     &__button{
+        font-family: $font-tertiary;
+        color: $color-black;
+        font-weight: 700;
+        border: 2px solid $color-primary-hints;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: $color-yellow-hints;
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+    .my-intro__image{
         // border: 5px solid white;
         height: 100%;
         aspect-ratio: 1;
@@ -103,7 +100,8 @@ header{
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        .bubble{
+    }
+    &__big-bubble{
             background-color: $color-primary-hints;
             height: 100%;
             width: 100%;
@@ -113,47 +111,47 @@ header{
             margin-left: 2%;
             margin-top: 5%;
             box-shadow: 0px 0px 3px 8px $color-primary-hints;
-            img{
-                // margin-top: -10%;
-                margin-left: -10%;
-            }
             position: relative;
-            .small-bubble{
-                background-color: $color-yellow-hints;
-                height: 20%;
-                aspect-ratio: 1;
-                margin-top: 3%;
-                margin-left: -5%;
-                border-radius: 50%;
-                box-shadow: 0px 0px 3px 20px $color-yellow-hints;
-            }
-        }
+    }
+    &__small-bubble{
+            background-color: $color-yellow-hints;
+            height: 20%;
+            aspect-ratio: 1;
+            margin-top: 3%;
+            margin-left: -5%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 3px 20px $color-yellow-hints;
+    }
+    &__omar{
+            // margin-top: -10%;
+            margin-left: -10%;
     }
     @media only screen and (max-width:1350px) {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        .my-intro-info{
-             //border: 5px solid green;
-             width: 60%;
-             margin-right: 40%;
-             font-family: $font-secondary;
-             h3{
+        .my-intro{
+            &__info{
+                //border: 5px solid green;
+                width: 60%;
+                margin-right: 40%;
+                font-family: $font-secondary;
+            }
+             &__h3{
                 font-size: 100%;
                 color: $color-yellow-hints;
              }
-             h2{
+             &__h2{
                 color: $color-white;
                 font-size: 200%;
                 font-weight: 900;
-                #job{
+                &--job{
                     text-decoration-line: underline;
                     text-decoration-style: wavy;
-                    text-decoration-color: $color-primary-hints;
                     text-decoration-thickness: 25px;
                 }
              }
-             button{
+             &__button{
                 font-family: $font-tertiary;
                 color: $color-black;
                 font-weight: 700;
@@ -165,15 +163,17 @@ header{
                 font-size: 12px;
             }
         }
-        .my-intro-image{
-            // border: 5px solid white;
-            height: 100%;
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            .bubble{
+        .my-intro{
+            &__image{
+                // border: 5px solid white;
+                height: 100%;
+                aspect-ratio: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            &__big-bubble{
                 background-color: $color-primary-hints;
                 height: 90%;
                 aspect-ratio: 1;
@@ -183,33 +183,44 @@ header{
                 margin-left: 5%;
                 margin-top: 10%;
                 box-shadow: 0px 0px 3px 8px $color-primary-hints;
-                img{
-                    margin-top: 1%;
-                    margin-left: -5%;
-                }
-                position: relative;
-                .small-bubble{
-                    background-color: $color-yellow-hints;
-                    height: 20%;
-                    aspect-ratio: 1;
-                    margin-top: 3%;
-                    margin-left: 5%;
-                    border-radius: 50%;
-                    box-shadow: 0px 0px 3px 20px $color-yellow-hints;
-                }
+            }
+            &__omar{
+                margin-top: 1%;
+                margin-left: -5%;
+                // aspect-ratio: 1;
+            }
+            position: relative;
+            &__small-bubble{
+                background-color: $color-yellow-hints;
+                height: 20%;
+                aspect-ratio: 1;
+                margin-top: 3%;
+                margin-left: 5%;
+                border-radius: 50%;
+                box-shadow: 0px 0px 3px 20px $color-yellow-hints;
             }
         }
     }
 }
 
-#tech-skills{
+.tech-skills{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
-    height: 40rem;
-    p{
+    margin-bottom: 5rem;
+    height: 28rem;
+    &__h4{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: $color-yellow-hints;
+        text-decoration-thickness: 10px;
+        font-family: $font-primary;
+    }
+    &__p{
         font-size: 1rem;
         margin: 0rem 20rem;
         text-align: center;
@@ -218,7 +229,7 @@ header{
         margin-bottom: 2rem;
     }
     @media only screen and (max-width: 850px){
-        p{
+        &__p{
             font-size: 1rem;
             margin: 0rem 10rem;
             text-align: center;
@@ -229,7 +240,7 @@ header{
     }
     @media only screen and (max-width: 620px){
         height: 60rem;
-        p{
+        &__p{
             font-size: 1rem;
             margin: 0rem 10rem;
             text-align: center;
@@ -241,7 +252,7 @@ header{
 }
 
 h4{
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     font-size: 2rem;
     text-decoration-line: underline;
@@ -258,6 +269,20 @@ h4{
     font-family: $font-tertiary;
     font-size: 1rem;
     height: 6rem;
+    background-color: white;
+    &__card{
+        height: 5rem;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem 0rem;
+        img{
+            height: 4rem;
+            aspect-ratio: 1;
+            margin: 1rem;
+        }
+    }
     @media only screen and (max-width: 850px){
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
@@ -266,7 +291,7 @@ h4{
         font-family: $font-tertiary;
         font-size: 1rem;
         height: 16rem;
-        .technology-card{
+        &__card{
             height: 5rem;
             aspect-ratio: 1;
             display: flex;
@@ -288,7 +313,7 @@ h4{
         font-family: $font-tertiary;
         font-size: 1rem;
         height: 30rem;
-        .technology-card{
+        &__card{
             height: 5rem;
             aspect-ratio: 1;
             display: flex;
@@ -304,80 +329,175 @@ h4{
     }
 }
 
-.technology-card{
-    height: 5rem;
-    aspect-ratio: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.5rem 0rem;
-    img{
-        height: 4rem;
-        aspect-ratio: 1;
-        margin: 1rem;
-    }
-}
-
-#projects{
+.projects{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: $color-secondary;
-    h4{
-        color: $color-black;
-        text-decoration-color: $color-yellow-hints;
+    background-color: $color-primary;
+    padding: 5rem 0rem;
+    &__h4{
+        color: $color-white;
+        text-decoration-color: $color-tertiary;
+        margin-bottom: 6rem;
     }
-}
-
-.project-card-container{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 50% 50%;
-    margin-bottom: 3rem;
-    .project-card{
-        border: 3px solid $color-white;
-        background-color: $color-primary;
-        height: 32rem;
-        width: 28rem;
-        margin: 1rem;
-    }
-    @media only screen and (max-width:1450px) {
+    &__container{
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
         margin-bottom: 3rem;
-        .project-card{
-            border: 3px solid $color-white;
-            background-color: $color-primary;
-            height: 32rem;
-            width: 28rem;
-            margin: 1rem;
+        @media only screen and (max-width:1450px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 33% 33% 33%;
+            margin-bottom: 3rem;
+        }
+        @media only screen and (max-width:950px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
         }
     }
-    @media only screen and (max-width:950px) {
+    &__card--pink{
+        border: 2px solid $color-primary-hints;
+        background-color: $color-tertiary;
+        height: 32rem;
+        width: 24rem;
+        margin: 2.5rem;
+        box-shadow: 8px 5px 20px $color-primary-hints;
         display: flex;
         flex-direction: column;
+    }
+    &__card--blue{
+        border: 2px solid $color-primary-hints;
+        background-color: $color-blue-hints;
+        height: 32rem;
+        width: 24rem;
+        margin: 2.5rem;
+        box-shadow: 8px 5px 20px $color-primary-hints;
+        display: flex;
+        flex-direction: column;
+    }
+    &__bottom-section{
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__info{
+        padding: 0.5rem;
+    }
+    &__h2{
+        color: $color-yellow-hints;
+        font-family: $font-tertiary;
+        font-size: 1.4rem;
+        font-weight: 100;
+    }
+    &__h1{
+        color: $color-white;
+        font-family: $font-primary;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    &__p{
+        color: $color-white;
+        font-family: $font-tertiary;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+    &__links{
+        display: flex;
         align-items: center;
+        justify-content: flex-end;
+        height: 3rem;
+        margin: 0rem 1rem;
+        align-self: bottom;
+    }
+    &__a{
+        font-family: $font-tertiary;
+        color: $color-black;
+        font-weight: 700;
+        border: 2px solid $color-primary-hints;
+        padding: 7px 15px;
+        background-color: $color-yellow-hints;
+        font-size: 1.2rem;
+        text-decoration: none;
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+    &__content{
+        max-width: 100%;
+        display: flex;
         justify-content: space-around;
-        .project-card{
-            border: 3px solid $color-white;
-            background-color: $color-primary;
-            height: 32rem;
-            width: 28rem;
-            margin: 1rem;
-        }
+        align-items: center;
+        height: 234px;
+        background-color: $color-yellow-hints;
+    }
+    &__img--adventure{
+        max-width: 90%;
+        padding: 10% 0%;
+        aspect-ratio: auto;
+    }
+    &__img--weather-app{
+        max-height: 90%;
+        aspect-ratio: auto;
+    }
+    &__img--flat-finder{
+        max-height: 90%;
+        aspect-ratio: auto;
+    }
+    &__img--gym-planner{
+        max-height: 90%;
+        aspect-ratio: auto;
+    }
+    &__img{
+        max-width: 100%;
+        aspect-ratio: auto;
     }
 }
 
-// Create an @media for smaller screen sizes for the project cards
-// In the media the display must be flex and the flex direction should be column
-// The sizes also must be reduced to about 80% of the width of the page while taking the same aspect ration as before with regards to the height (think of smthn)
-// Some projects to add to the website include
-// Check Github for project from second year
-// Weather app
-// Java Adventure Game
-// GymPlanner Website
+.about-me{
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0rem;
+    &__imagery{
+        width: 40%;
+        aspect-ratio: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__info{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0rem 2rem;
+    }
+    &__h6{
+        margin-bottom: 3rem;
+        font-size: 3rem;
+        text-decoration-color: $color-secondary;
+        font-family: $font-primary;
+    }
+    &__h7{
+        font-family: $font-tertiary;
+        font-size: 1.2rem;
+    }
+}
+
+.footer{
+    background-color: $color-blue-hints;
+    height: 4.5rem;
+}
+
+// Create a hover element on each card to slowly become brighter and more opaque
+// also make the cards grow when hovering over them and make sure it is a slow process and it does'nt just grow or become bright.
+// Remove padding in the title when the media width is smaller
+
 // Client Project
 // Rest API
 

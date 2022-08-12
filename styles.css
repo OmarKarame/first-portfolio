@@ -6,30 +6,36 @@
   padding: 0;
 }
 
-header {
-  padding: 1% 0%;
+.header {
+  padding: 1rem;
   background-color: #645e96;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: "Bodoni Moda", serif;
 }
-header h1 {
-  color: #F9F9FC;
-  font-weight: 10;
+.header__h1 {
+  color: #FaFaFb;
+  font-size: 2rem;
 }
-header .header-links {
+.header__h2 {
+  font-size: 3rem;
+  padding-left: 9rem;
+  color: #FaFaFb;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 800;
+}
+.header__links {
   display: flex;
   align-items: center;
 }
-header .header-links a {
-  color: #F9F9FC;
-}
-header .header-links .individual-header-links {
+.header__link {
   text-decoration: none;
-  margin: 0rem 0.6rem;
+  color: #FaFaFb;
+  margin: 0rem 1rem;
+  font-size: 1.2rem;
 }
-header .header-links button {
+.header__button {
   font-family: "Source Sans Pro", sans-serif;
   color: #0d0e10;
   font-weight: 700;
@@ -37,38 +43,43 @@ header .header-links button {
   padding: 5px 10px;
   border-radius: 10px;
   background-color: #f8d583;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 1450px) {
+  .header__h2 {
+    padding: 0;
+  }
 }
 
-#my-intro {
-  background-color: #F9F9FC;
+.my-intro {
+  background-color: #FaFaFb;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #645e96;
   aspect-ratio: 2.5;
-  padding-top: 4%;
 }
-#my-intro .my-intro-info {
+.my-intro__info {
   width: 40%;
   font-family: "Cormorant", serif;
   margin: auto;
 }
-#my-intro .my-intro-info h3 {
+.my-intro__h3 {
   font-size: 150%;
   color: #f8d583;
 }
-#my-intro .my-intro-info h2 {
-  color: #F9F9FC;
+.my-intro__h2 {
+  color: #FaFaFb;
   font-size: 300%;
   font-weight: 900;
 }
-#my-intro .my-intro-info h2 #job {
+.my-intro__h2--job {
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color: #3f1786;
+  text-decoration-color: #b8557a;
   text-decoration-thickness: 35px;
 }
-#my-intro .my-intro-info button {
+.my-intro__button {
   font-family: "Source Sans Pro", sans-serif;
   color: #0d0e10;
   font-weight: 700;
@@ -77,9 +88,9 @@ header .header-links button {
   border-radius: 10px;
   background-color: #f8d583;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 1rem;
 }
-#my-intro .my-intro-image {
+.my-intro .my-intro__image {
   height: 100%;
   aspect-ratio: 1;
   display: flex;
@@ -87,7 +98,7 @@ header .header-links button {
   justify-content: center;
   overflow: hidden;
 }
-#my-intro .my-intro-image .bubble {
+.my-intro__big-bubble {
   background-color: #3f1786;
   height: 100%;
   width: 100%;
@@ -99,10 +110,7 @@ header .header-links button {
   box-shadow: 0px 0px 3px 8px #3f1786;
   position: relative;
 }
-#my-intro .my-intro-image .bubble img {
-  margin-left: -10%;
-}
-#my-intro .my-intro-image .bubble .small-bubble {
+.my-intro__small-bubble {
   background-color: #f8d583;
   height: 20%;
   aspect-ratio: 1;
@@ -111,33 +119,35 @@ header .header-links button {
   border-radius: 50%;
   box-shadow: 0px 0px 3px 20px #f8d583;
 }
+.my-intro__omar {
+  margin-left: -10%;
+}
 @media only screen and (max-width: 1350px) {
-  #my-intro {
+  .my-intro {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  #my-intro .my-intro-info {
+  .my-intro .my-intro__info {
     width: 60%;
     margin-right: 40%;
     font-family: "Cormorant", serif;
   }
-  #my-intro .my-intro-info h3 {
+  .my-intro .my-intro__h3 {
     font-size: 100%;
     color: #f8d583;
   }
-  #my-intro .my-intro-info h2 {
-    color: #F9F9FC;
+  .my-intro .my-intro__h2 {
+    color: #FaFaFb;
     font-size: 200%;
     font-weight: 900;
   }
-  #my-intro .my-intro-info h2 #job {
+  .my-intro .my-intro__h2--job {
     text-decoration-line: underline;
     text-decoration-style: wavy;
-    text-decoration-color: #3f1786;
     text-decoration-thickness: 25px;
   }
-  #my-intro .my-intro-info button {
+  .my-intro .my-intro__button {
     font-family: "Source Sans Pro", sans-serif;
     color: #0d0e10;
     font-weight: 700;
@@ -148,7 +158,10 @@ header .header-links button {
     margin-top: 10px;
     font-size: 12px;
   }
-  #my-intro .my-intro-image {
+  .my-intro .my-intro {
+    position: relative;
+  }
+  .my-intro .my-intro__image {
     height: 100%;
     aspect-ratio: 1;
     display: flex;
@@ -156,7 +169,7 @@ header .header-links button {
     justify-content: center;
     overflow: hidden;
   }
-  #my-intro .my-intro-image .bubble {
+  .my-intro .my-intro__big-bubble {
     background-color: #3f1786;
     height: 90%;
     aspect-ratio: 1;
@@ -166,13 +179,12 @@ header .header-links button {
     margin-left: 5%;
     margin-top: 10%;
     box-shadow: 0px 0px 3px 8px #3f1786;
-    position: relative;
   }
-  #my-intro .my-intro-image .bubble img {
+  .my-intro .my-intro__omar {
     margin-top: 1%;
     margin-left: -5%;
   }
-  #my-intro .my-intro-image .bubble .small-bubble {
+  .my-intro .my-intro__small-bubble {
     background-color: #f8d583;
     height: 20%;
     aspect-ratio: 1;
@@ -183,15 +195,25 @@ header .header-links button {
   }
 }
 
-#tech-skills {
+.tech-skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
-  height: 40rem;
+  margin-bottom: 5rem;
+  height: 28rem;
 }
-#tech-skills p {
+.tech-skills__h4 {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #f8d583;
+  text-decoration-thickness: 10px;
+  font-family: "Bodoni Moda", serif;
+}
+.tech-skills__p {
   font-size: 1rem;
   margin: 0rem 20rem;
   text-align: center;
@@ -200,7 +222,7 @@ header .header-links button {
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 850px) {
-  #tech-skills p {
+  .tech-skills__p {
     font-size: 1rem;
     margin: 0rem 10rem;
     text-align: center;
@@ -210,10 +232,10 @@ header .header-links button {
   }
 }
 @media only screen and (max-width: 620px) {
-  #tech-skills {
+  .tech-skills {
     height: 60rem;
   }
-  #tech-skills p {
+  .tech-skills__p {
     font-size: 1rem;
     margin: 0rem 10rem;
     text-align: center;
@@ -224,7 +246,7 @@ header .header-links button {
 }
 
 h4 {
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 2rem;
   text-decoration-line: underline;
@@ -241,6 +263,20 @@ h4 {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   height: 6rem;
+  background-color: white;
+}
+.technologies__card {
+  height: 5rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0rem;
+}
+.technologies__card img {
+  height: 4rem;
+  aspect-ratio: 1;
+  margin: 1rem;
 }
 @media only screen and (max-width: 850px) {
   .technologies {
@@ -252,7 +288,7 @@ h4 {
     font-size: 1rem;
     height: 16rem;
   }
-  .technologies .technology-card {
+  .technologies__card {
     height: 5rem;
     aspect-ratio: 1;
     display: flex;
@@ -260,7 +296,7 @@ h4 {
     align-items: center;
     margin: 0rem 2rem;
   }
-  .technologies .technology-card img {
+  .technologies__card img {
     height: 4rem;
     aspect-ratio: 1;
     margin: 1rem;
@@ -276,7 +312,7 @@ h4 {
     font-size: 1rem;
     height: 30rem;
   }
-  .technologies .technology-card {
+  .technologies__card {
     height: 5rem;
     aspect-ratio: 1;
     display: flex;
@@ -284,79 +320,178 @@ h4 {
     align-items: center;
     margin: 0rem 2rem;
   }
-  .technologies .technology-card img {
+  .technologies__card img {
     height: 4rem;
     aspect-ratio: 1;
     margin: 1rem;
   }
 }
 
-.technology-card {
-  height: 5rem;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1.5rem 0rem;
-}
-.technology-card img {
-  height: 4rem;
-  aspect-ratio: 1;
-  margin: 1rem;
-}
-
-#projects {
+.projects {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #F09081;
+  background-color: #645e96;
+  padding: 5rem 0rem;
 }
-#projects h4 {
-  color: #0d0e10;
-  text-decoration-color: #f8d583;
+.projects__h4 {
+  color: #FaFaFb;
+  text-decoration-color: #b8557a;
+  margin-bottom: 6rem;
 }
-
-.project-card-container {
+.projects__container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 50% 50%;
   margin-bottom: 3rem;
 }
-.project-card-container .project-card {
-  border: 3px solid #F9F9FC;
-  background-color: #645e96;
-  height: 32rem;
-  width: 28rem;
-  margin: 1rem;
-}
 @media only screen and (max-width: 1450px) {
-  .project-card-container {
+  .projects__container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% 33%;
     margin-bottom: 3rem;
   }
-  .project-card-container .project-card {
-    border: 3px solid #F9F9FC;
-    background-color: #645e96;
-    height: 32rem;
-    width: 28rem;
-    margin: 1rem;
-  }
 }
 @media only screen and (max-width: 950px) {
-  .project-card-container {
+  .projects__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
-  .project-card-container .project-card {
-    border: 3px solid #F9F9FC;
-    background-color: #645e96;
-    height: 32rem;
-    width: 28rem;
-    margin: 1rem;
-  }
+}
+.projects__card--pink {
+  border: 2px solid #3f1786;
+  background-color: #b8557a;
+  height: 32rem;
+  width: 24rem;
+  margin: 2.5rem;
+  box-shadow: 8px 5px 20px #3f1786;
+  display: flex;
+  flex-direction: column;
+}
+.projects__card--blue {
+  border: 2px solid #3f1786;
+  background-color: #787bd1;
+  height: 32rem;
+  width: 24rem;
+  margin: 2.5rem;
+  box-shadow: 8px 5px 20px #3f1786;
+  display: flex;
+  flex-direction: column;
+}
+.projects__bottom-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects__info {
+  padding: 0.5rem;
+}
+.projects__h2 {
+  color: #f8d583;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+.projects__h1 {
+  color: #FaFaFb;
+  font-family: "Bodoni Moda", serif;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.projects__p {
+  color: #FaFaFb;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.projects__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 3rem;
+  margin: 0rem 1rem;
+  align-self: bottom;
+}
+.projects__a {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #0d0e10;
+  font-weight: 700;
+  border: 2px solid #3f1786;
+  padding: 7px 15px;
+  background-color: #f8d583;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+.projects__content {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 234px;
+  background-color: #f8d583;
+}
+.projects__img--adventure {
+  max-width: 90%;
+  padding: 10% 0%;
+  aspect-ratio: auto;
+}
+.projects__img--weather-app {
+  max-height: 90%;
+  aspect-ratio: auto;
+}
+.projects__img--flat-finder {
+  max-height: 90%;
+  aspect-ratio: auto;
+}
+.projects__img--gym-planner {
+  max-height: 90%;
+  aspect-ratio: auto;
+}
+.projects__img {
+  max-width: 100%;
+  aspect-ratio: auto;
+}
+
+.about-me {
+  background-color: #FaFaFb;
+  display: flex;
+  justify-content: space-around;
+  padding: 8rem 0rem;
+}
+.about-me__imagery {
+  width: 40%;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me__info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0rem 2rem;
+}
+.about-me__h6 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-decoration-color: #F09081;
+  font-family: "Bodoni Moda", serif;
+}
+.about-me__h7 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+}
+
+.footer {
+  background-color: #787bd1;
+  height: 4.5rem;
 }

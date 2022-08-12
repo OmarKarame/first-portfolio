@@ -10,67 +10,68 @@
 <body>
     <!-- Heading containing my name and links to the rest of the website -->
 
-    <header>
-        <h1><span></span>Omar Karame</h1>
-        <div class="header-links">
-            <a href="#" class="individual-header-links">Home</a>
-            <a href="#" class="individual-header-links">About</a>
-            <a href="#" class="individual-header-links">Projects</a>
-            <button href="#" class="individual-header-links">Get in Touch</button>
+    <header class="header">
+        <h1 class="header__h1"><span></span>Omar Karame</h1>
+        <h2 class="header__h2">&lt;/OK&gt;</h2>
+        <div class="header__links">
+            <a href="#" class="header__link">Home</a>
+            <a href="#" class="header__link">About</a>
+            <a href="#" class="header__link">Projects</a>
+            <button href="#" class="header__link header__button">Get in Touch</button>
         </div>
     </header>
 
     <!-- Introduction to myself -->
 
-    <section id="my-intro">
-        <div class="my-intro-info">
-            <h3>Hey! I'm Omar Karame</h3>
-            <h2>A <span id="job">Junior Technology Consultant</span> based in London, England.</h1>
-            <button href="#">Take a look at my work</button>
+    <section class="my-intro">
+        <div class="my-intro__info">
+            <h3 class="my-intro__h3">Hey! I'm Omar Karame</h3>
+            <h2 class="my-intro__h2">A <span class="my-intro__h2--job">Junior Technology Consultant</span> based in London, England.</h1>
+            <button href="#" class="my-intro__button">Take a look at my work</button>
         </div>
-        <div class="my-intro-image">
-            <div class="bubble">
-                <div class="small-bubble"></div>
-                <img src="./images/omar-pic.png" alt="Picture of me" width="75%" height="100%">                
+        <div class="my-intro__image">
+            <div class="my-intro__big-bubble">
+                <div class="my-intro__small-bubble"></div>
+                <img src="./images/omar-pic.png" alt="Picture of me" class="my-intro__omar" width="75%" height="100%">                
             </div>  
         </div>
     </section>
 
     <!-- My technical skills -->
 
-    <section id="tech-skills">
-        <h4>Technical Skills</h4>
-        <p>Here are some of the technologies and languages that I have experience in.</p>
+    <section class="tech-skills">
+        <h4 class="tech-skills__h4">Technical Skills</h4>
+        <p class="tech-skills__p">Here are some of the technologies and languages that I have experience in.</p>
         <div class="technologies">
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/react.png" alt="react icon">
                 <h5>React</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/git.png" alt="git icon">
                 <h5>GIT</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/html.png" alt="html icon">
                 <h5>HTML5</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/css.png" alt="css icon">
                 <h5>CSS3</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/javascript.png" alt="javascript icon">
                 <h5>JavaScript</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/sass.png" alt="sass icon">
                 <h5>SCSS</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/python.png" alt="python icon">
                 <h5>Python</h5>
             </div>
-            <div class="technology-card">
+            <div class="technologies__card">
                 <img src="./images/java.png" alt="java icon">
                 <h5>Java</h5>
             </div>
@@ -79,37 +80,132 @@
 
     <!-- My projects so far (use grid)-->
 
-    <section id="projects">
-        <h4>Projects</h4>
-        <div class="project-card-container">
-            <div class="project-card">
-                <h6>#1</h6>
+    <section class="projects">
+        <h4 class="projects__h4">Projects</h4>
+        <div class="projects__container">
+            <div class="projects__card--pink">
+                <div class="projects__content">
+                    <img src="./images/adventure-game.png" class="projects__img--adventure" alt="adventure game">
+                </div>
+                <div class="projects__bottom-section">
+                    <div class="projects__info">
+                        <h2 class="projects__h2">Java</h2>
+                        <h1 class="projects__h1">Adventure Game</h1>
+                        <p class="projects__p">This is an adventure game that contains one level and three different enemies with respective abilities that help them kill you. The aim of the game is to dodge the enemies' attacks and launch fireballs to kill them.</p>
+                    </div>
+                    <div class="projects__links">
+                        <a href="#" class="projects__a">Code</a>
+                        <a href="#" class="projects__a">View</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h6>#2</h6>
+            <div class="projects__card--blue">
+                <div class="projects__content">
+                    <img src="./images/weather-app-timer.png" class="projects__img--weather-app" alt="weather web app, timer page">
+                    <img src="./images/weather-app-main.png" class="projects__img--weather-app" alt="weather web app, main weather page">
+                    <img src="./images/weather-app-customise-alerts.png" class="projects__img--weather-app" alt="weather web app, custimise alerts">
+                </div>
+                <div class="projects__bottom-section">
+                    <div class="projects__info">
+                        <h2 class="projects__h2">React, API</h2>
+                        <h1 class="projects__h1">Weather Web App</h1>
+                        <p class="projects__p">This project uses an API to display live weather updates of London. The app also has a timer that a user can use when they want to go on a run whenever the weather allows it. The app also has custom notifications for when it is currently the users desired weather.</p>
+                    </div>
+                    <div class="projects__links">
+                        <a href="#" class="projects__a">Code</a>
+                        <a href="#" class="projects__a">View</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h6>#3</h6>
+            <div class="projects__card--pink">
+                <div class="projects__content">
+                    <img src="./images/flat-finder.png" class="projects__img--flat-finder" alt="adventure game">
+                </div>
+                <div class="projects__bottom-section">
+                    <div class="projects__info">
+                        <h2 class="projects__h2">React, API</h2>
+                        <h1 class="projects__h1">Flat-Finder Web App</h1>
+                        <p class="projects__p">This project involves using react to create a login/sign up system. Once the user is logged into the database, they can input a location in the search bar and the flats near that area will pop up on the map.</p>
+                    </div>
+                    <div class="projects__links">
+                        <a href="#" class="projects__a">Code</a>
+                        <a href="#" class="projects__a">View</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h6>#4</h6>
+            <div class="projects__card--blue">
+                <div class="projects__content">
+                    <img src="./images/gym-planner.jpg" class="projects__img--gym-planner" alt="Gym planner local website">
+                </div>
+                <div class="projects__bottom-section">
+                    <div class="projects__info">
+                        <h2 class="projects__h2">HTML, CSS, JavaScript, PHP, mySQL</h2>
+                        <h1 class="projects__h1">Gym Planner Website</h1>
+                        <p class="projects__p">This is a local website that allows the user to create an account on a local database. The user can then log in and input their body dimensions and their information will be updated on the database. The user can also view their workouts.</p>
+                    </div>
+                    <div class="projects__links">
+                        <a href="#" class="projects__a">Code</a>
+                        <a href="#" class="projects__a">View</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h6>#5</h6>
+            <div class="projects__card--pink">
+                <div class="projects__content">
+                    <img src="" class="projects__img" alt="">
+                </div>
+                <div class="projects__bottom-section">
+                    <div class="projects__info">
+                        <h2 class="projects__h2">NA</h2>
+                        <h1 class="projects__h1">None</h1>
+                        <p class="projects__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam ab atque non harum fugit eligendi, consectetur in sunt magni nobis maxime aperiam animi adipisci tenetur assumenda ex placeat vero quis.</p>
+                    </div>
+                    <div class="projects__links">
+                        <a href="#" class="projects__a">Code</a>
+                        <a href="#" class="projects__a">View</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h6>#6</h6>
+            <div class="projects__card--blue">
+                <div class="projects__content">
+                    <img src="" class="projects__img" alt="">
+                </div>
+                <div class="projects__bottom-section">
+                    <div class="projects__info">
+                        <h2 class="projects__h2">NA</h2>
+                        <h1 class="projects__h1">None</h1>
+                        <p class="projects__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui impedit corrupti placeat adipisci vel veritatis laudantium libero repudiandae quam perspiciatis harum at, ipsam, facere ratione assumenda accusamus quasi tenetur numquam.</p>
+                    </div>
+                    <div class="projects__links">
+                        <a href="#" class="projects__a">Code</a>
+                        <a href="#" class="projects__a">View</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About me -->
-
-    <section>
-
-    </section>
+    <section class="about-me">
+        <div class="about-me__imagery">
+            <img src="./images/about-me.png" alt="Drawing of man" width="550px">
+        </div>
+        <div class="about-me__info">
+            <h6 class="about-me__h6">About Me</h6>
+            <h7 class="about-me__h7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe odit, nemo quos error vel dolore nisi quia eius perferendis reiciendis excepturi et odio illo esse sequi ut labore! Voluptatibus, voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatem provident iusto culpa nam voluptates fugit quaerat voluptas, porro officia, suscipit voluptate maiores consequatur dicta eius quos inventore explicabo magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero repudiandae cum numquam reprehenderit, facilis veniam! Eum soluta asperiores officiis rem blanditiis suscipit labore ipsa eveniet fugiat, repudiandae sapiente inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vero. Nobis sapiente, deleniti ex voluptates consequuntur iste atque excepturi distinctio ducimus eligendi recusandae officia repellendus, praesentium dicta quae dolores laborum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga et dolores voluptatem. Obcaecati impedit officiis ipsa omnis hic, sapiente laudantium quisquam voluptatibus dolor qui eos exercitationem cumque deleniti facilis dolore?</h7>
+        </div>
+     </section>
 
     <!-- Footing containing my emails and links to socials -->
+    <footer class="footer">
+        <div class="footer__email">
+            <h8 class="footer__h8"></h8>
+        </div>
+        <div class="footer__icons">
+            <img src="" class="footer__icon" alt="">
+            <img src="" class="footer__icon" alt="">
+            <img src="" class="footer__icon" alt="">
+        </div>
+    </footer>
 
 </body>
 </html>
