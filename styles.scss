@@ -492,6 +492,15 @@ h4{
 .footer{
     background-color: $color-blue-hints;
     height: 4.5rem;
+    display: flex;
+    padding: 0rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    &__email{
+        color: $color-white;
+        font-family: $font-tertiary;
+        font-size: 1.3rem;
+    }
 }
 
 // Create a hover element on each card to slowly become brighter and more opaque
